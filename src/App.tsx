@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
-import Header from './components/Header';
-import Portfolio from './components/Portfolio';
-import About from './components/About';
-import Offer from './components/Offer';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Header from './components/header/Header';
+import About from './components/about/About';
+import Portfolio from './components/portfolio/Portfolio';
+import Offer from './components/offer/Offer';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 
 const App: React.FC = () => {
   return (
