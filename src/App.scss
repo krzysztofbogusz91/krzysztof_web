@@ -1,4 +1,8 @@
+@import 'assets/styles/colors';
+
 .main-layout {
+  background-color: $base-color;
+  color: $secondary-color;
   .section {
     width: 100vw;
     // TODO remove when filed with content
