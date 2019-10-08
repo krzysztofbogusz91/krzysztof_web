@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import './Navbar.scss'
 
 export default class Navbar extends Component<{}, {navbarElements: any[]}> {
@@ -8,8 +8,8 @@ export default class Navbar extends Component<{}, {navbarElements: any[]}> {
         this.state = {
             navbarElements: [
                 {name: 'about'},
-                {name: 'offer'},
                 {name: 'portfolio'},
+                {name: 'offer'},
                 {name: 'blog'},
                 {name: 'contact'},
             ]
@@ -18,12 +18,15 @@ export default class Navbar extends Component<{}, {navbarElements: any[]}> {
 
     render() {
         const list = this.state.navbarElements.map((elem: any, i: number) => 
-                        (<li key={i} className="nav-elem">
-                            <Link 
+                        (<li key={i} className="nav-list-elem">
+                            <Link
+                                className="nav-elem" 
+                                activeClass="active"
                                 to={elem.name}
                                 smooth={true}
+                                spy={true}
                                 duration= {500}
-                                offset={-30}
+                                offset={-50}
                                 >{elem.name}</Link>
                         </li>))
 
