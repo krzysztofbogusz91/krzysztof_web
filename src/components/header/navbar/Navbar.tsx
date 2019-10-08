@@ -1,6 +1,18 @@
 import React, { Component } from 'react'
-
-export default class Navbar extends Component {
+import './Navbar.scss'
+export default class Navbar extends Component<{}, {navbarElements: any[]}> {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            navbarElements: [
+                {name: 'about'},
+                {name: 'offer'},
+                {name: 'portfolio'},
+                {name: 'blog'},
+                {name: 'contact'},
+            ]
+        }
+    }
     goTo(event: any){
        const text: string = event.target.textContent.toLowerCase();
        return !!text ? (document as any).getElementById(`#${text}`).scrollIntoView() : '';
@@ -8,15 +20,13 @@ export default class Navbar extends Component {
     render() {
         // TODO li -> to loop
         // TODO fix scroll redux method?
+        const list = this.state.navbarElements.map((elem: any) => (<li onClick={this.goTo} className="nav-elem">{elem.name}</li>))
+
         return ( 
             <div>
               <nav className="nav">
                   <ul className="nav-elements">
-                      <li onClick={this.goTo} className="nav-elem">About</li>
-                      <li className="nav-elem">Offer</li>
-                      <li className="nav-elem">Portfolio</li>
-                      <li className="nav-elem">Blog</li>
-                      <li className="nav-elem">Contact</li>
+                    {list}
                   </ul>
               </nav>
             </div>
