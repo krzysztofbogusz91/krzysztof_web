@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import { Link, animateScroll as scroll } from "react-scroll";
 import './Navbar.scss'
+
 export default class Navbar extends Component<{}, {navbarElements: any[]}> {
     constructor(props: any) {
         super(props);
@@ -13,14 +15,16 @@ export default class Navbar extends Component<{}, {navbarElements: any[]}> {
             ]
         }
     }
-    goTo(event: any){
-       const text: string = event.target.textContent.toLowerCase();
-       return !!text ? (document as any).getElementById(`#${text}`).scrollIntoView() : '';
-    }
+
     render() {
-        // TODO li -> to loop
-        // TODO fix scroll redux method?
-        const list = this.state.navbarElements.map((elem: any) => (<li onClick={this.goTo} className="nav-elem">{elem.name}</li>))
+        const list = this.state.navbarElements.map((elem: any, i: number) => 
+                        (<li key={i} className="nav-elem">
+                            <Link 
+                                to={elem.name}
+                                smooth={true}
+                                duration= {500}
+                                >{elem.name}</Link>
+                        </li>))
 
         return ( 
             <div>
