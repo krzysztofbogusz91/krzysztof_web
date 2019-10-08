@@ -23,11 +23,12 @@ export default class Navbar extends Component<{}, {navbarElements: any[]}> {
                                 to={elem.name}
                                 smooth={true}
                                 duration= {500}
+                                offset={-30}
                                 >{elem.name}</Link>
                         </li>))
 
         return ( 
-            <div>
+            <div className="nav-section">
               <nav className="nav">
                   <ul className="nav-elements">
                     {list}

@@ -1,7 +1,26 @@
-.nav {
-    .nav-elements{
-        .nav-elem{
-            text-transform: capitalize;
+@import 'assets/styles/colors';
+.nav-section{
+    height: 30px;
+    .nav {
+        background-color: $navbar-main;
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 10;
+        .nav-elements{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .nav-elem{
+                padding: 5px;
+                margin: 0 5px;
+                list-style: none;
+                text-transform: uppercase;
+                color: $navbar-secondary
+            }
         }
     }
 }
