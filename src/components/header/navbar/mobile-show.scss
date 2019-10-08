@@ -1,8 +1,52 @@
 .mobile-show{
-
+    margin-right: 20px;
+    margin-top: 6px;
+    z-index: 10;
     .mobile-show__dash{
         display: block;
         list-style: none;
+        width: 26px;
+        height: 6px;
         border-top: 2px solid lighten(darken($navbar-secondary, 50%), 30%)
+    }
+}
+
+.mobile-show.show{
+    .mobile-show__dash{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .mobile-show__dash:nth-child(1) {
+        animation: showX1 2s;
+        width: 20px;
+        animation-fill-mode: forwards; 
+    }
+    .mobile-show__dash:nth-child(2){
+        opacity: 0;
+        transition: opacity;
+    }
+    .mobile-show__dash:nth-child(3){
+        animation: showX2 2s;
+        width: 20px;
+        animation-fill-mode: forwards;  
+    }
+}
+
+@keyframes showX1 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-45deg) translateX(2px);
+    }
+}
+
+@keyframes showX2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(45deg) translateX(-2px) ;
     }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from "react-scroll";
 import './Navbar.scss'
 
-export default class Navbar extends Component<{}, {navbarElements: any[]}> {
+export default class Navbar extends Component<{}, {navbarElements: any[], showMenu: boolean}> {
     constructor(props: any) {
         super(props);
         this.state = {
@@ -12,8 +12,13 @@ export default class Navbar extends Component<{}, {navbarElements: any[]}> {
                 {name: 'offer'},
                 {name: 'blog'},
                 {name: 'contact'},
-            ]
+            ],
+            showMenu: false
         }
+    }
+
+    toggleMenu = () =>{
+        this.setState(prevState => ({showMenu: !prevState.showMenu}))
     }
 
     render() {
@@ -29,7 +34,7 @@ export default class Navbar extends Component<{}, {navbarElements: any[]}> {
                                 offset={-50}
                                 >{elem.name}</Link>
                         </li>))
-
+        const showMenu = this.state.showMenu ? 'show' : '';
         return ( 
             <div className="nav-section">
               <nav className="nav">
@@ -44,13 +49,13 @@ export default class Navbar extends Component<{}, {navbarElements: any[]}> {
                             >KB</Link>
                     </li>    
                 </ul>
-                <ul className="mobile-show">
-                    <li className="mobile-show__dash"></li>
-                    <li className="mobile-show__dash"></li>
-                    <li className="mobile-show__dash"></li>
-                </ul>
-                <ul className="nav-elements">
+                <ul className={`nav-elements menu ${showMenu}`}>
                     {list}
+                </ul>
+                <ul className={`mobile-show ${showMenu}`} onClick={this.toggleMenu}>
+                    <li className="mobile-show__dash"></li>
+                    <li className="mobile-show__dash"></li>
+                    <li className="mobile-show__dash"></li>
                 </ul>
               </nav>
             </div>
