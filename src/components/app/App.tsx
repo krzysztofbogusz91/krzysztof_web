@@ -18,6 +18,7 @@ const App: React.FC = () => {
       <Offer />
       <Contact />
       <Footer />
+      
     </div>
   );
 }
