@@ -38,6 +38,7 @@ export default class Navbar extends Component<{}, {navbarElements: any[], showMe
                             <Link
                                 className="nav-elem" 
                                 activeClass="active"
+                                onClick={this.toggleHideMenu}
                                 to={elem.name}
                                 smooth={true}
                                 spy={true}
