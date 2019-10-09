@@ -4,7 +4,7 @@ import './Hero.scss'
 export default function Hero() {
         return ( 
             <div className="hero-section">
-               <span className="hero-section__text"> Lets create something together! </span>
+               <span className="hero-section__text"> Let`s create something cool together! </span>
             </div>
         )
 }

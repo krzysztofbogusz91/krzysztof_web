@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from "react-scroll";
 import './Navbar.scss'
 
-export default class Navbar extends Component<{}, {navbarElements: any[], showMenu: boolean}> {
+export default class Navbar extends Component<{}, {navbarElements: any[], showMenu: boolean, hideMenu: boolean}> {
     constructor(props: any) {
         super(props);
         this.state = {
@@ -13,12 +13,23 @@ export default class Navbar extends Component<{}, {navbarElements: any[], showMe
                 {name: 'blog'},
                 {name: 'contact'},
             ],
-            showMenu: false
+            showMenu: false,
+            hideMenu: false
         }
     }
 
-    toggleMenu = () =>{
-        this.setState(prevState => ({showMenu: !prevState.showMenu}))
+    toggleShowMenu = () =>{
+        if(this.state.showMenu){
+            this.toggleHideMenu();
+        }else{
+            this.setState(prevState => ({showMenu: !prevState.showMenu, hideMenu: false}))
+        }
+    }
+
+    toggleHideMenu = () =>{
+        if(this.state.showMenu){
+            this.setState(prevState => ({hideMenu: !prevState.hideMenu, showMenu: false}))
+        }
     }
 
     render() {
@@ -35,12 +46,14 @@ export default class Navbar extends Component<{}, {navbarElements: any[], showMe
                                 >{elem.name}</Link>
                         </li>))
         const showMenu = this.state.showMenu ? 'show' : '';
+        const hideMenu = this.state.hideMenu ? 'hide' : '';
         return ( 
             <div className="nav-section">
               <nav className="nav">
                 <ul className="nav-elements">
                 <li className="nav-list-elem">
                         <Link
+                            onClick={this.toggleHideMenu}
                             className="nav-elem logo" 
                             to={"header"}
                             smooth={true}
@@ -49,10 +62,10 @@ export default class Navbar extends Component<{}, {navbarElements: any[], showMe
                             >KB</Link>
                     </li>    
                 </ul>
-                <ul className={`nav-elements menu ${showMenu}`}>
+                <ul className={`nav-elements menu ${showMenu} ${hideMenu}`}>
                     {list}
                 </ul>
-                <ul className={`mobile-show ${showMenu}`} onClick={this.toggleMenu}>
+                <ul className={`mobile-show ${showMenu} ${hideMenu}`} onClick={this.toggleShowMenu}>
                     <li className="mobile-show__dash"></li>
                     <li className="mobile-show__dash"></li>
                     <li className="mobile-show__dash"></li>

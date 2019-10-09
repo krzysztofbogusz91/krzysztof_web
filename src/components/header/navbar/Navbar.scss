@@ -16,7 +16,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            z-index: 10;
             // mobile
             .nav-list-elem{
                 padding: 5px;
@@ -47,7 +46,7 @@
             top: 50px;
             background-color: $navbar-main;
             width: 100%;
-            z-index: 1;
+            z-index: -1;
             .nav-list-elem {
                 padding: 10px;
                 font-size: 17px;
@@ -57,6 +56,13 @@
         .nav-elements.menu.show{
             visibility: visible;
             animation: showMenu 2s;
+        }
+        .nav-elements.menu.hide{
+            z-index: -1;
+            visibility: visible;
+            animation: hideMenu 2s ;
+            animation-fill-mode: forwards;  
+        
         }
 
         .nav-elements:first-child{
@@ -71,6 +77,16 @@
     }
     100%{
         transform: translateY(0);
+    }
+}
+@keyframes hideMenu {
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-150px);
     }
 }
 
