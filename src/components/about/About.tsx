@@ -3,8 +3,105 @@ import './About.scss'
 export default class About extends Component {
     render() {
         return (
-            <div id="about" className="section">
-                <section>
+            <div  id="about">
+            <div className="grid">
+                <ul className="hexGrid">
+                <li className="hex">
+
+                    <div className="hexIn">
+
+                    <div className="hexLink">
+                        <div className='img'></div> 
+     
+                    </div>
+                    </div>
+                </li>
+                <li className="hex">
+
+                    <div className="hexIn">
+
+                    <div className="hexLink">
+                        <div className='img'></div> 
+     
+                    </div>
+                    </div>
+                </li>
+                <li className="hex">
+
+                    <div className="hexIn">
+
+                    <div className="hexLink">
+                        <div className='img'></div> 
+     
+                    </div>
+                    </div>
+                </li>
+                <li className="hex">
+
+                    <div className="hexIn">
+
+                    <div className="hexLink">
+                        <div className='img'></div> 
+     
+                    </div>
+                    </div>
+                </li>
+                <li className="hex">
+
+                    <div className="hexIn">
+
+                    <div className="hexLink">
+                        <div className='img'></div> 
+     
+                    </div>
+                    </div>
+                </li>
+                <li className="hex">
+
+                    <div className="hexIn">
+
+                    <div className="hexLink">
+                        <div className='img'></div> 
+     
+                    </div>
+                    </div>
+                </li>
+                <li className="hex">
+
+                    <div className="hexIn">
+
+                    <div className="hexLink">
+                        <div className='img'></div> 
+     
+                    </div>
+                    </div>
+                </li>
+                <li className="hex">
+
+                    <div className="hexIn">
+
+                    <div className="hexLink">
+                        <div className='img'></div> 
+     
+                    </div>
+                    </div>
+                </li>
+                <li className="hex">
+
+                    <div className="hexIn">
+
+                    <div className="hexLink">
+                        <div className='img'></div> 
+     
+                    </div>
+                    </div>
+                </li>
+                </ul>
+                </div>
+            <div className="section">
+
+
+                {/* hex gid */}
                     <h2>About me</h2>
                     <article>
                         <span>Hi, I`m Krzysztof Poznań (Poland) based developer, but i mostly work remotely</span>
@@ -15,8 +112,7 @@ export default class About extends Component {
                     <article>
                         <span>Node is my environment for backend dev, I`v done some projects with Express and MongoDb</span>
                     </article>
-                </section>
-            </div>
-        )
+                </div>
+            </div> )
     }
 }
