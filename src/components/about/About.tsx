@@ -4,6 +4,7 @@ export default class About extends Component {
     render() {
         return (
             <div  id="about">
+                <div className="parentSection about">
             <div className="grid">
                 <ul className="hexGrid">
                 <li className="hex">
@@ -112,6 +113,7 @@ export default class About extends Component {
                     <article>
                         <span>Node is my environment for backend dev, I`v done some projects with Express and MongoDb</span>
                     </article>
+                </div>
                 </div>
             </div> )
     }
