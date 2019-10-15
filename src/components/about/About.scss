@@ -1,6 +1,10 @@
 @import 'src/assets/styles/colors.scss';
 @import 'src/assets/styles/hex/index';
-
+article{
+  span {
+    opacity: 0;
+  }
+}
 .parentSection{
   position: relative;
   z-index: 1;
@@ -11,30 +15,6 @@
   top: 40px;
   right: 0;
 }
-.about-header{
-  display: block;
-  margin: 5px 0;
-}
-.row{
-  font-size: 16px;
-  display: block;
-  width: 45%;
-  &.row-1{
-    position: relative;
-    top: -28px;
-    right: -120px;
-  }
-  &.row-2{
-    position: relative;
-    top: 30px;
-    right: -200px;
-  }
-  &.row-3{
-    position: relative;
-    top: 82px;
-    right: -10px;
-  }
-}
 
 .grid{
     position: relative;
@@ -43,4 +23,3 @@
     overflow: hidden;
     padding-bottom: 50px;
 }
-

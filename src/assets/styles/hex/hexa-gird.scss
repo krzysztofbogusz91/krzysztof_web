@@ -50,7 +50,7 @@
     height: 100%;
     margin: 0 auto;
   }
-  .hex:nth-of-type(7) >.hexIn > .hexLink > .img {
+  .hex:nth-of-type(6) >.hexIn > .hexLink > .img {
     background-color: #F5CE95;
     background-image: url('../../images/react-icon.png');
     background-size: 80%;
@@ -68,14 +68,53 @@
     height: 100%;
     margin: 0 auto;
   }
+
+  .hex:nth-of-type(2) {
+    opacity: 1;
+  }
+  .hex:nth-of-type(2) >.hexIn > .hexLink > .img {
+    background-color: rgba($hex-color-main, 0.2);
+    span {
+      color: $secondary-color;
+      position: relative;
+      top: 45px;
+      font-size: 16px;
+      right: 0;
+    }
+  }
+  .hex:nth-of-type(5) {
+    opacity: 1;
+  }
+  .hex:nth-of-type(5) >.hexIn > .hexLink > .img  {
+    background-color: rgba($hex-color-main, 0.2);
+    span {
+      color: $secondary-color;
+      position: relative;
+      top: 45px;
+      font-size: 16px;
+      right: 0;
+    }
+  }
+  .hex:nth-of-type(7) {
+    opacity: 1;
+  }
+  .hex:nth-of-type(7) >.hexIn > .hexLink > .img {
+    background-color: rgba($hex-color-main, 0.2);
+    span {
+      color: $secondary-color;
+      position: relative;
+      top: 35px;
+      font-size: 16px;
+      right: 0;
+    }
+  }
   
   .hex:nth-of-type(1) {
     opacity: 0.8;
   }
-  .hex:nth-of-type(2) {
-    opacity: 0;
-  }
-  .hex:nth-of-type(8) {
+
+
+  .hex:nth-of-type(10) {
     opacity: 0;
   }
   
