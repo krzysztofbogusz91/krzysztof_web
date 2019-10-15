@@ -10,8 +10,7 @@
     list-style-type: none;
     z-index: 8;
     height: 100%;
-    
-    }
+  }
   
   .hex {
     position: relative;
@@ -32,7 +31,7 @@
     background-color: #F5CE95;
     background-image: url('../../images/krzysztof.jpg')
   }
-  .hex:nth-of-type(5) >.hexIn > .hexLink > .img {
+  .hex:nth-of-type(4) >.hexIn > .hexLink > .img {
     background-color: #F5CE95;
     background-image: url('../../images/angular-icon.svg');
    
@@ -42,7 +41,7 @@
     height: 100%;
     margin: 0 auto;
   }
-  .hex:nth-of-type(6) >.hexIn > .hexLink > .img {
+  .hex:nth-of-type(3) >.hexIn > .hexLink > .img {
     background-color: #F5CE95;
     background-image: url('../../images/js-icon.png');
     background-size: 80%;

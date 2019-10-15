@@ -6,39 +6,41 @@
   z-index: 1;
 }
 .about-section {
-    position: absolute;
-    z-index: 18;
-    top: 40px;
-    right: -8px;
+  position: absolute;
+  z-index: 18;
+  top: 40px;
+  right: 0;
 }
 .about-header{
   display: block;
-  width: 250px;
   margin: 5px 0;
 }
 .row{
   font-size: 16px;
-  padding: 2px;
   display: block;
-  width: 220px;
+  width: 45%;
   &.row-1{
     position: relative;
-    top: 5px;
+    top: -28px;
+    right: -120px;
   }
   &.row-2{
     position: relative;
-    top: 20px;
-    right: 45px;
+    top: 30px;
+    right: -200px;
   }
   &.row-3{
     position: relative;
-    top: 25px;
-    right: 100px;
+    top: 82px;
+    right: -10px;
   }
 }
 
 .grid{
     position: relative;
     top: 0;
-    z-index: 8;
+    z-index: 10;
+    overflow: hidden;
+    padding-bottom: 50px;
 }
+

@@ -102,8 +102,8 @@ export default class About extends Component {
             <div className="section about-section">
 
 
-                    <h2 className="about-header">About me</h2>
                     <article className="row row-1">
+                    <h2 className="about-header">About me</h2>
                         <span>Hi, I`m Krzysztof Poznań (Poland) based developer, but i mostly work remotely</span>
                     </article>
                     <article className="row row-2">
