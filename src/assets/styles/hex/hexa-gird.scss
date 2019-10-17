@@ -1,10 +1,10 @@
 
 .hexGrid {
     position: relative;
-    right: 40px;
+    right: 80px;
     display: flex;
     flex-wrap: wrap;
-    width: 460px;
+    width: 550px;
     margin: 0 0;
     font-family: sans-serif;
     list-style-type: none;
@@ -27,91 +27,17 @@
     transition: all 0.5s;
     opacity: 0.9;
   }
-  .hex:first-child >.hexIn > .hexLink > .img {
-    background-color: #F5CE95;
-    background-image: url('../../images/krzysztof.jpg')
-  }
-  .hex:nth-of-type(4) >.hexIn > .hexLink > .img {
-    background-color: #F5CE95;
-    background-image: url('../../images/angular-icon.svg');
-   
-    background-size: 80%;
-    background-repeat: no-repeat;
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
-  }
-  .hex:nth-of-type(3) >.hexIn > .hexLink > .img {
-    background-color: #F5CE95;
-    background-image: url('../../images/js-icon.png');
-    background-size: 80%;
-    background-repeat: no-repeat;
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
-  }
-  .hex:nth-of-type(6) >.hexIn > .hexLink > .img {
-    background-color: #F5CE95;
-    background-image: url('../../images/react-icon.png');
-    background-size: 80%;
-    background-repeat: no-repeat;
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
-  }
-  .hex:nth-of-type(9) >.hexIn > .hexLink > .img {
-    background-color: #F5CE95;
-    background-image: url('../../images/node-icon.png');
-    background-size: 80%;
-    background-repeat: no-repeat;
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
-  }
+ 
 
-  .hex:nth-of-type(2) {
-    opacity: 1;
-  }
-  .hex:nth-of-type(2) >.hexIn > .hexLink > .img {
-    background-color: rgba($hex-color-main, 0.2);
-    span {
-      color: $secondary-color;
-      position: relative;
-      top: 45px;
-      font-size: 16px;
-      right: 0;
-    }
-  }
-  .hex:nth-of-type(5) {
-    opacity: 1;
-  }
-  .hex:nth-of-type(5) >.hexIn > .hexLink > .img  {
-    background-color: rgba($hex-color-main, 0.2);
-    span {
-      color: $secondary-color;
-      position: relative;
-      top: 45px;
-      font-size: 16px;
-      right: 0;
-    }
-  }
-  .hex:nth-of-type(7) {
-    opacity: 1;
-  }
-  .hex:nth-of-type(7) >.hexIn > .hexLink > .img {
-    background-color: rgba($hex-color-main, 0.2);
-    span {
-      color: $secondary-color;
-      position: relative;
-      top: 35px;
-      font-size: 16px;
-      right: 0;
-    }
-  }
+  @include hexPictureSetup('../../images/krzysztof.jpg', 1, 0, 0.8);
+  @include hexPictureSetup('../../images/angular-icon.svg', 5, 1, 0.4);
+  @include hexPictureSetup('../../images/js-icon.png', 3, 1, 0.6);
+  @include hexPictureSetup('../../images/react-icon.png', 6, 1, 0.4);
+  @include hexPictureSetup('../../images/node-icon.png', 9, 1, 0.6);
   
-  .hex:nth-of-type(1) {
-    opacity: 0.8;
-  }
+  @include hexImgSpanSetup(48px, 20px, 1, 2);
+  @include hexImgSpanSetup(48px, 20px, 1, 4);
+  @include hexImgSpanSetup(42px, 20px, 1, 7);
 
 
   .hex:nth-of-type(10) {
@@ -240,16 +166,16 @@
   //   }
     
   //   @media (max-width: 1200px) and (min-width:901px) { /* <- 4-3  hexagons per row */
-  //     #hexGrid{
-  //       padding-bottom: 5.5%;
-  //       font-size: 13px;
-  //     }
-  //     .hex {
-  //       width: 25%; /* = 100 / 4 */
-  //     }
-  //     .hex:nth-child(7n+5){ /* first hexagon of even rows */
-  //       margin-left:12.5%;  /* = width of .hex / 2  to indent even rows */
-  //     }
+      // .hexGrid{
+      //   padding-bottom: 5.5%;
+      //   font-size: 13px;
+      // }
+      // .hex {
+      //   width: 25%; /* = 100 / 4 */
+      // }
+      // .hex:nth-child(7n+5){ /* first hexagon of even rows */
+      //   margin-left:12.5%;  /* = width of .hex / 2  to indent even rows */
+      // }
   //   }
     
   //   @media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */

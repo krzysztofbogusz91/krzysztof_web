@@ -1,0 +1,32 @@
+@mixin hexImgSpanSetup($top-length, $font-size, $opacity, $type-number) {
+    .hex:nth-of-type( #{$type-number} ) {
+        opacity: $opacity;
+      }
+      .hex:nth-of-type(#{$type-number}) >.hexIn > .hexLink > .img {
+        background-color: rgba($hex-color-main, 0.1);
+        span{
+            color: $secondary-color;
+            position: relative;
+            top: $top-length;
+            font-size: $font-size;
+            right: 0;
+        }
+      }
+}
+
+@mixin hexPictureSetup($url, $type-number, $size-it, $opacity) {
+    .hex:nth-of-type(#{$type-number}) {
+        opacity: $opacity;
+      }
+    .hex:nth-of-type(#{$type-number}) >.hexIn > .hexLink > .img {
+        background-color: $hex-color-img;
+        background-image: url(#{$url}); 
+        @if $size-it == 1 {
+            background-size: 80%;
+            background-repeat: no-repeat;
+            width: auto;
+            height: 100%;
+            margin: 0 auto;
+        }
+    }
+}
