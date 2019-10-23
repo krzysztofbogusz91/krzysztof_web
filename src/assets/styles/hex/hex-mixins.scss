@@ -28,5 +28,12 @@
             height: 100%;
             margin: 0 auto;
         }
+        @if $size-it == 2 {
+            background-size: 70%;
+            background-repeat: no-repeat;
+            width: auto;
+            height: 100%;
+            margin: 0 auto;
+        }
     }
 }

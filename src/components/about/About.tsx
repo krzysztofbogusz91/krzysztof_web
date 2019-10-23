@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './About.scss'
-interface I_hex {
+ interface I_hex {
     id: number; 
     imgUrl: string; 
     text: string; 
@@ -18,9 +18,14 @@ export default class About extends Component<{},{ gridSetup: I_hex[] }> {
                 {id: 5, imgUrl: '', text: '', visible: true,},
                 {id: 6, imgUrl: '', text: '', visible: true,},
                 {id: 7, text: 'Node is my environment for backend dev, I`v done projects with Express and MongoDb', imgUrl: '', visible: true,},
-                {id: 8, imgUrl: '', text: '', visible: true,},
+                {id: 8, imgUrl: '', text: '', visible: false,},
                 {id: 9, imgUrl: '', text: '', visible: true,},
                 {id: 10, imgUrl: '', text: '', visible: true,},
+                {id: 11, imgUrl: '', text: '', visible: false,},
+                {id: 12, imgUrl: '', text: '', visible: true,},
+                {id: 13, imgUrl: '', text: '', visible: true,},
+                {id: 14, imgUrl: '', text: '', visible: false,},
+                {id: 15, imgUrl: '', text: '', visible: true,},
             ],
         }
     }
@@ -29,7 +34,7 @@ export default class About extends Component<{},{ gridSetup: I_hex[] }> {
     render() {
         const createHexagonList = (setup: I_hex[]) => {
             return setup.map((hex: I_hex) =>(
-                <li key={hex.id} className="hex">
+                <li key={hex.id} className={hex.visible ? 'hex' : 'hex hidden'}>
                     <div className="hexIn">
                         <div className="hexLink">
                             {!hex.text ? 

@@ -31,16 +31,19 @@
 
   @include hexPictureSetup('../../images/krzysztof.jpg', 1, 0, 0.8);
   @include hexPictureSetup('../../images/angular-icon.svg', 5, 1, 0.4);
-  @include hexPictureSetup('../../images/js-icon.png', 3, 1, 0.6);
+  @include hexPictureSetup('../../images/js-icon.png', 3, 2, 0.6);
   @include hexPictureSetup('../../images/react-icon.png', 6, 1, 0.4);
   @include hexPictureSetup('../../images/node-icon.png', 9, 1, 0.6);
-  
+  // --- description ---
+  // part i
   @include hexImgSpanSetup(48px, 20px, 1, 2);
+  // part ii
   @include hexImgSpanSetup(48px, 20px, 1, 4);
-  @include hexImgSpanSetup(42px, 20px, 1, 7);
+  // part iii
+  @include hexImgSpanSetup(38px, 20px, 1, 7);
 
 
-  .hex:nth-of-type(10) {
+  .hex.hidden {
     opacity: 0;
   }
   
