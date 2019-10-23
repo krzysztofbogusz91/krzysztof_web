@@ -8,8 +8,7 @@ export default class Navbar extends Component<{}, {navbarElements: any[], showMe
         this.state = {
             navbarElements: [
                 {name: 'about'},
-                {name: 'portfolio'},
-                {name: 'offer'},
+                {name: 'services'},
                 {name: 'blog'},
                 {name: 'contact'},
             ],
