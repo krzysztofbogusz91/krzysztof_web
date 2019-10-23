@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
-import './Portfolio.scss'
+import './Services.scss'
+
 interface I_project {
     id: number; 
     imgUrl: string; 
     text: string; 
     visible: boolean;
 }
-export default class Portfolio extends Component<{}, {projects: I_project[]}> {
+export default class Services extends Component<{}, {projects: I_project[]}> {
     constructor(props: any) {
         super(props);
         this.state = {
             projects: [
-                {id: 1, imgUrl: 'website-scribble-c.jpg', text: 'Project 1', visible: true,},
-                {id: 2, imgUrl: 'website-scribble-c.jpg', text: "Project 2", visible: true,},
-                {id: 3, imgUrl: 'website-scribble-c.jpg', text: 'Project 3', visible: true,},
-                {id: 4, imgUrl: 'website-scribble-c.jpg', text: 'Project 4', visible: true,},
+                {id: 1, imgUrl: 'dev.svg', text: 'Web Development', visible: true,},
+                {id: 2, imgUrl: 'responsive.svg', text: "Responsive Development", visible: true,},
+                {id: 3, imgUrl: 'wordpress.svg', text: 'Worpress Based Custom Websites', visible: true,},
+                {id: 4, imgUrl: 'seo.svg', text: 'SEO Optimization', visible: true,},
+                {id: 5, imgUrl: 'test.svg', text: 'SEO Optimization', visible: true,},
+                {id: 6, imgUrl: 'agile.svg', text: 'Agile', visible: true,},
             ],
         }
     }
@@ -36,7 +39,7 @@ export default class Portfolio extends Component<{}, {projects: I_project[]}> {
         const projects = createProjectList(this.state.projects)
         return (
             <div id="portfolio"  className="section portfolio-section">
-                <h2 className="portfolio-header">Experience</h2>
+                <h2 className="portfolio-header">Freelance Software Development</h2>
                 <ul className="project-container">
                     {projects}
                 </ul>
