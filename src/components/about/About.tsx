@@ -57,12 +57,15 @@ export default class About extends Component<{},{ gridSetup: I_hex[] }> {
        
         return (
             <div  id="about">
-                <div className="parentSection about">
+                <div className="about">
+
+                <div className="parentSection">
                     <div className="grid">
                         <ul className="hexGrid">
                             {hexList}
                         </ul>
                     </div>
+                </div>
                 </div>
             </div> )
     }

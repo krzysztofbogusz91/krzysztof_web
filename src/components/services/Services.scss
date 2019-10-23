@@ -8,13 +8,12 @@
   align-items: center;
 }
 .portfolio-section{
-  position: relative;
-  top: -320px;
+  margin-bottom: 50px;
   z-index: 8;
 }
 .portfolio-header{
   text-align: center;
-  margin: 25px 0;
+  padding: 50px 0 25px 0;
 }
 .project-container{
   @include flex-center-col;
@@ -25,6 +24,8 @@
     border-radius: 20px;
     padding: 5px;
     list-style: none;
+    overflow: hidden;
+
     .project-element__img--container{
       @include flex-center-col;
       .project-element__img{
@@ -58,34 +59,32 @@
           justify-content: center;
           align-items: center;
           margin: 10px 0;
+        
           .project-element__img--text-dot{
+
             display: block;
-            width: 6px;
-            height: 6px;
-            background-color: $base-color;
+            width: 70px;
+            height: 3px;
+            background-color: $hex-color-img;
             position: relative;
-            border-radius: 50%;
-            border: 3px solid $hex-color-img;
+            z-index: 1;
+            border-radius: 2px;
+
             &::before{
-              position: absolute;
-              left: -20px;
+              z-index: 1;
               content: '';
               display: block;
               width: 6px;
               height: 6px;
-              background-color: $hex-color-img;
-              border-radius: 50%;
-            }
-            &::after{
+              top: -4.5px;
+              left: 29px;
+              background-color: $base-color;
               position: absolute;
-              left: 20px;
-              content: '';
-              display: block;
-              width: 6px;
-              height: 6px;
-              background-color: $hex-color-img;
               border-radius: 50%;
+              border: 3px solid $hex-color-img;
+
             }
+
           }
 
         }

@@ -1,25 +1,17 @@
 @import 'src/assets/styles/colors.scss';
 @import 'src/assets/styles/hex/index';
-article{
-  span {
-    opacity: 0;
-  }
+.about{
+  width: 100vw;
 }
 .parentSection{
   position: relative;
   z-index: 1;
-}
-.about-section {
-  position: absolute;
-  z-index: 18;
-  top: 40px;
-  right: 0;
+  height: 90vh;
 }
 
 .grid{
-    position: relative;
-    top: 0;
-    z-index: 10;
-    overflow: hidden;
-    padding-bottom: 50px;
+    position: absolute;
+    z-index: 100;
+    width: 100vw;
+    overflow-x: hidden;
 }

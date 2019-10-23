@@ -8,17 +8,20 @@ interface I_project {
     text: string; 
     visible: boolean;
 }
+
+const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+
 export default class Services extends Component<{}, {projects: I_project[]}> {
     constructor(props: any) {
         super(props);
         this.state = {
             projects: [
-                {id: 1, imgUrl: 'dev.svg', text: 'lorem ipsum dolor set lorem ipsum ipsum dolor', header: 'Web Development', visible: true,},
-                {id: 2, imgUrl: 'responsive.svg', text: '', header: "Responsive Development", visible: true,},
-                {id: 3, imgUrl: 'wordpress.svg', text: '', header: 'Worpress Based Custom Websites', visible: true,},
-                {id: 4, imgUrl: 'seo.svg', text: '', header: 'SEO Optimization', visible: true,},
-                {id: 5, imgUrl: 'test.svg', text: '', header: 'Unit And End To End Testing', visible: true,},
-                {id: 6, imgUrl: 'agile.svg', text: '', header: 'Agile', visible: true,},
+                {id: 1, imgUrl: 'dev.svg', text: lorem, header: 'Web Development', visible: true,},
+                {id: 2, imgUrl: 'responsive.svg', text: lorem, header: "Responsive Development", visible: true,},
+                {id: 3, imgUrl: 'wordpress.svg', text: lorem, header: 'Worpress Based Custom Websites', visible: true,},
+                {id: 4, imgUrl: 'seo.svg', text: lorem, header: 'SEO Optimization', visible: true,},
+                {id: 5, imgUrl: 'test.svg', text: lorem, header: 'Unit And End To End Testing', visible: true,},
+                {id: 6, imgUrl: 'agile.svg', text: lorem, header: 'Agile', visible: true,},
             ],
         }
     }
@@ -33,7 +36,6 @@ export default class Services extends Component<{}, {projects: I_project[]}> {
                     <h3 className="project-element__img--text header">{pro.header}</h3>
                     <div className="project-element__img--text-dot--container">
                     <span className="project-element__img--text-dot"></span>
-
                     </div>
                     <p className="project-element__img--text content">{pro.text}</p>
                
