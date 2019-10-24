@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import './About.scss'
+import React, { Component } from 'react';
+import './About.scss';
  interface I_hex {
     id: number; 
     imgUrl: string; 

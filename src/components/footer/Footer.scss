@@ -1,0 +1,19 @@
+@import 'src/assets/styles/colors.scss';
+.footer{
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  opacity: 0.4;
+  background-color: darken($color: $base-color, $amount: 20);
+  .footer-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    .footer-span{
+      display: block;
+    }
+  }
+}

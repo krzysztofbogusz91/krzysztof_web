@@ -9,7 +9,7 @@ export default class Navbar extends Component<{}, {navbarElements: any[], showMe
             navbarElements: [
                 {name: 'about'},
                 {name: 'services'},
-                {name: 'blog'},
+                // {name: 'blog'},
                 {name: 'contact'},
             ],
             showMenu: false,
